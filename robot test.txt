@@ -1,0 +1,102 @@
+1
+
+document.getElementsByClassName("gLFyf gsfi")[0].className
+
+2
+
+document.getElementsByClassName("gLFyf gsfi")[0].title;
+
+3.
+
+$(".gLFyf gsfi")
+
+4
+
+var a = document.getElementsByClassName("gLFyf gsfi")[0].value
+
+a = a.concat(" robot")
+
+document.getElementsByClassName("gLFyf gsfi")[0].value = a
+
+console.log(a)
+
+5
+
+document.getElementsByName("btnK")[1].click()
+
+6
+
+function getElements(attrib) {
+
+    return document.querySelectorAll('[' + attrib + ']');
+
+}
+
+
+var elements = getElements('href');
+
+
+
+for ( var i = 0; i < elements.length; i++ ) {
+
+    console.log(elements[i].href)
+
+}
+
+7
+
+var x = document.getElementsByTagName("P");
+console.log(x[1].textContent);
+
+8
+
+var a = 4
+var b = 5
+var type
+
+function myfunction(a, b, type){
+    switch( type )
+    {
+        case 1: 
+            console.log(a + b)
+            break
+        case 2:
+            console.log(a - b)
+            break
+        case 3:
+            console.log(a * b)
+            break
+    }
+}
+
+for ( type = 1; type <= 3; type++)
+    myfunction(a, b, type)
+
+9
+
+function f(a,b,cb) {
+    const d = a;
+    let e = d;
+    switch(b)
+    {
+        case 'green':
+            e = a.concat('You can acces the website')
+            console.log(e)
+            break;
+        case 'red':
+            e = 'Is not ok. You are not allowed to view the website'
+            console.log(e)
+            break;
+        case b != a:
+            a = 'Error. Something went wrong'
+            console.log(a)
+            b = 'red'
+            break;
+    }
+    if ( cb )
+    {
+        cb => console.log(a), console.log(b)
+    }
+}
+
+f( 'Is ok.', 'green', 'Error' )
